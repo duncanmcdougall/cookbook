@@ -1,0 +1,16 @@
+{% extends 'layouts/base.njk' %}
+
+{% block content %}
+    <article class="post recipe container">
+        <header class="post__header header">
+            {% if emoji %}
+                <span class="post__emoji">{{emoji}}</span>
+            {% endif %}
+            <h1 class="margin-top-0">{{ title }}</h1>
+            <div class="meta">
+                <span class="serves">Serves: 👩‍🍳👩‍🍳</span>
+            </div>
+        </header>
+        {{ content | safe }}
+    </article>
+{% endblock %}
