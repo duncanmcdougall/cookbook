@@ -1,0 +1,61 @@
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.recipe {
+  h3 {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.8rem;
+    margin-top: 2em;
+    font-weight: 700;
+  }
+
+  img {
+    max-width: calc(100vw - 2rem);
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: fadeIn ease 1s forwards;
+  }
+
+  ol {
+    list-style: none;
+    counter-reset: counter;
+    padding: 0 0 0 2rem;
+
+    > li {
+      position: relative;
+      margin-bottom: 1rem;
+    }
+
+    > li:before {
+      counter-increment: counter;
+      content: counter(counter);
+      font-size: 0.8rem;
+      width: 2rem;
+      text-align: center;
+      display: inline-block;
+      position: absolute;
+      left: -2rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      line-height: 1.5rem;
+      border: 2px solid black;
+      border-radius: 2rem;
+    }
+  }
+}
+
+.post__header {
+  text-align: center;
+}
+
+.recipe__tagline {
+  font-size: 1rem;
+  margin: 1rem 0;
+}

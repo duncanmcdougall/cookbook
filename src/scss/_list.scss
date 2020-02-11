@@ -1,0 +1,25 @@
+.all-recipes {
+  list-style: none;
+  padding: 0;
+}
+
+.recipe-summary {
+  margin-bottom: 2rem;
+}
+
+.recipe-summary__emoji {
+  display: inline-block;
+}
+
+@media screen and (min-width: 740px) {
+  .recipe-summary {
+    position: relative;
+  }
+
+  .recipe-summary__emoji {
+    position: absolute;
+    display: block;
+    transform: translateX(-120%);
+    top: 0;
+  }
+}

@@ -1,15 +1,26 @@
+{% set pageTitle = title + " | The McDougall's Cookbook"%}
+{% if metaTitle %}
+    {% set pageTitle = metaTitle %}
+{% endif %}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{ title }} | Duncan's Cookbook</title>
+        <title>{{pageTitle}}</title>
         <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Josefin+Sans:400,700&display=swap" rel="stylesheet">
         <style>
             {% include "css/styles.css" ignore missing %}
         </style>
     </head>
     <body>
-        {% block content %}{% endblock content %}
+        <div class="page">
+            {% block content %}{% endblock content %}
+        </div>
+        <footer class="site-footer">
+        A project from <a href="https://www.belter.io">Duncan McDougall</a>
+        </footer>
+
     </body>
 </html>

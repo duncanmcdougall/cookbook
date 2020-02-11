@@ -1,0 +1,33 @@
+{% extends 'layouts/base.njk' %}
+{% set metaTitle = "The McDougall's Cookbook"%}
+
+{% block content %}
+
+    <header class="container site-header">
+        <h1>The McDougall's Cookbook.</h1>
+        <div class="intro">
+            <p>
+            We have more recipe books than we have space for. Any recipes we've
+            twisted and tweaked to our taste or because that's what we have in the cupboard.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+        <ul class="all-recipes">
+            {% for item in collections.recipes %}
+                <li class="recipe-summary">
+                    <h3 class="margin-bottom-0">
+
+                        <a href="{{ item.url }}" class="" rel="bookmark">
+                            {{ item.data.title }}</a>
+                        <span class="recipe-summary__emoji">{{ item.data.emoji}}</span>
+                    </h3>
+                    <p>{{item.data.tagline|safe}}</p>
+                </li>
+            {% endfor %}
+
+        </ul>
+    </main>
+
+{%endblock %}

@@ -10,7 +10,7 @@ module.exports = function(config) {
 
   config.setUseGitIgnore(false);
 
-  config.addCollection("feed", collection => {
+  config.addCollection("recipes", collection => {
     return [...collection.getFilteredByGlob("./src/recipes/**/*.md")];
   });
 

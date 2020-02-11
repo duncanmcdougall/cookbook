@@ -2,14 +2,9 @@
 title: Lemony Spaghetti
 date: "2020-01-20"
 serves: 2
-difficulty: 1
-speed: 2
 emoji: 🍋
+tagline: Fresh &sdot; Hot &sdot; Cheesy
 ---
-
-Fresh &sdot; Hot &sdot; Cheesy
-
-![Using a pasta maker with flour covering hands](https://source.unsplash.com/4nXkhLCrkLo/1400x600)
 
 ### Ingredients
 
